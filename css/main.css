@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/font/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-weight: normal;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/font/Montserrat-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("/font/Montserrat-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat-Regular", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #0c51ba;
+
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  font-weight: 100;
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 1280px;
+  background-color: #fff;
+  border-radius: 23px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container::before {
+  position: absolute;
+  content: url("../img/Intersect.png");
+  width: 232.26px;
+  height: 194.12px;
+}
+
+.button {
+  padding: 10px 30px;
+  margin-right: 16px;
+  font-family: Montserrat;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #0c51ba;
+  border: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-header {
+  display: flex;
+  width: 100%;
+}
+
+.header_info {
+  margin-top: 217px;
+  margin-bottom: 193px;
+  margin-left: 80px;
+}
+
+.main-header__hello {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+  color: #0c51ba;
+}
+
+.main-header h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #757575;
+}
+
+.main-header img {
+  width: 592px;
+  margin-top: 48px;
+}
+
+.content-hidden {
+  /* display: none; */
+  position: absolute;
+  top: 0%;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 23px 0 0 23px;
+}
+
+.content-hidden::before {
+  position: absolute;
+  content: url("../img/Intersect_modal_window.png");
+  width: 232.26px;
+  height: 194.12px;
+}
+
+.popup {
+  display: flex;
+  width: 70%;
+  padding: 90px;
+}
+
+.main-form {
+  width: 100%;
+}
+
+.main-form input {
+  font-family: "Montserrat-Regular", Arial, sans-serif;
+  font-size: 18px;
+  color: #0c51ba;
+  border: none;
+  border-bottom: 2px solid #0c51ba;
+  width: 80%;
+  margin-bottom: 50px;
+  padding-bottom: 5px;
+}
+
+.callback-message {
+  font-family: "Montserrat-Regular", Arial, sans-serif;
+  font-size: 18px;
+  resize: none;
+  border: none;
+  width: 80%;
+  border-bottom: 2px solid #0c51ba;
+  margin-bottom: 33px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: -34px;
+  width: 53px;
+  height: 53px;
+  font-size: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 53px;
+  height: 4px;
+  background-color: #0c51ba;
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.main-footer {
+  display: flex;
+  background-color: #0c51ba;
+  border-radius: 0 0 0 23px;
+  font-size: 18px;
+}
+
+.main-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-list__item {
+  margin-right: 10px;
+}
