@@ -108,17 +108,27 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header img {
-  width: 592px;
+
   margin-top: 48px;
 }
 
 .content-hidden {
-  /* display: none; */
+  opacity: 0;
   position: absolute;
   top: 0%;
+  transition: 0.4s;
   width: 50%;
+  left: -100%;
   background-color: #fff;
   border-radius: 23px 0 0 23px;
+}
+
+.open {
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.4s;
+  /* transition: 1s; */
+  transition: left 0.2s;
 }
 
 .content-hidden::before {
@@ -128,14 +138,21 @@ input[type="radio"].visually-hidden {
   height: 194.12px;
 }
 
+.main-form .invalid-field {
+  border-bottom: orangered 2px solid;
+}
+
 .popup {
   display: flex;
   width: 70%;
   padding: 90px;
+  margin-right: 50px;
 }
 
 .main-form {
   width: 100%;
+  padding-bottom: 25px;
+  padding-top: 50px;
 }
 
 .main-form input {
@@ -144,19 +161,9 @@ input[type="radio"].visually-hidden {
   color: #0c51ba;
   border: none;
   border-bottom: 2px solid #0c51ba;
-  width: 80%;
+  width: 100%;
   margin-bottom: 50px;
   padding-bottom: 5px;
-}
-
-.callback-message {
-  font-family: "Montserrat-Regular", Arial, sans-serif;
-  font-size: 18px;
-  resize: none;
-  border: none;
-  width: 80%;
-  border-bottom: 2px solid #0c51ba;
-  margin-bottom: 33px;
 }
 
 .modal-close {
@@ -205,10 +212,72 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 
+.contact-list {
+  margin-bottom: 13px;
+}
+
 .social-list {
   display: flex;
 }
 
 .social-list__item {
   margin-right: 10px;
+}
+
+
+.author_icon {
+  display: none;
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .content-hidden {
+    width: 100%;
+    border-radius: 23px;
+  }
+
+  .author {
+    display: none;
+  }
+
+  .author_icon {
+    display: block;
+    padding-top: 15%;
+    padding-right: 3%;
+  }
+
+  .modal-close {
+    right: 34px;
+  }
+
+  .main-footer {
+    border-radius: 0 0 23px 23px
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column-reverse;
+  }
+
+  .header_info {
+    margin-top: 0;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: center;
+  }
+
+  .author_icon {
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .main-form {
+    margin-bottom: 5%;
+  }
 }
